@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Remx by aengelke</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Remx</h1>
+        <p>The ReMX regular expression library for Python</p>
+
+        <p class="view"><a href="https://github.com/aengelke/remx">View the Project on GitHub <small>aengelke/remx</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/aengelke/remx/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/aengelke/remx/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/aengelke/remx">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a id="the-remx-regular-expression-library-for-python" class="anchor" href="#the-remx-regular-expression-library-for-python" aria-hidden="true"><span class="octicon octicon-link"></span></a>The ReMX regular expression library for Python</h2>
+
+<p>Differences of ReMX to the re library of Python:</p>
+
+<ul>
+<li>ReMX supports tuples as regex and objects as checkables</li>
+<li>ReMX is lightweight and deterministic</li>
+<li>ReMX has a linear runtime</li>
+<li>ReMX only supports a subset of regular
+expressions that are supported in re.</li>
+<li>ReMX does not fully support extractions.</li>
+</ul>
+
+<p>Usage:</p>
+
+<div class="highlight highlight-python"><pre><span class="pl-k">import</span> remx
+remx.compile(<span class="pl-s1"><span class="pl-st">r</span><span class="pl-pds">"</span><span class="pl-c1">[<span class="pl-c1">a-zA-Z0-9</span>_]</span><span class="pl-k">+</span><span class="pl-pds">"</span></span>)                  <span class="pl-c"># =&gt; &lt;remx.remx at ...&gt;</span>
+remx.match(<span class="pl-s1"><span class="pl-st">r</span><span class="pl-pds">"</span>hello( world)<span class="pl-k">?</span><span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>hello day<span class="pl-pds">"</span></span>)      <span class="pl-c"># =&gt; hello</span>
+remx.extract(<span class="pl-s1"><span class="pl-st">r</span><span class="pl-pds">"</span>hello (<span class="pl-c1">[<span class="pl-c1">a-z</span>]</span><span class="pl-k">+</span>)<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>hello world!<span class="pl-pds">"</span></span>) <span class="pl-c"># =&gt; "hello world", ["world"]</span></pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/aengelke">aengelke</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

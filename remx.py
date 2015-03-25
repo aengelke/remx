@@ -33,7 +33,6 @@ class remx:
         self.extractfn = lambda x, y : x
     def define(self, name, value):
         self.definitions[name] = value
-        print self.definitions
     def match(self, string):
         return self.extract(string)[0]
     def extract(self, string):
@@ -220,7 +219,6 @@ class remx:
 
 def compile(regex, extractfn=None):
     parsedRegex, remaining = remx._compile(regex)
-    print parsedRegex.data, regex
     if len(remaining) > 0 or not parsedRegex:
         return None
     if extractfn:
